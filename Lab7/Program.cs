@@ -17,7 +17,7 @@ namespace Lab7
             {
                 var patternN = @"^[A-Z][a-zA-Z]{1,29}$";
                 bool result = Regex.IsMatch(name, patternN);
-                
+               if (result)
                 {
                 Console.WriteLine("Name is valid!");
                 Console.ReadLine();
@@ -45,9 +45,10 @@ namespace Lab7
 
 		       throw new Exception();
 	}
-             {
+             
                 var patternE = @"^[a-zA-Z0-9]+\@[\da-zA-Z0-9]+\.[a-z]{1,7}$";
                 bool entry = Regex.IsMatch(email, patternE);
+                if (entry)
                 {
                 Console.WriteLine("Email is valid!");
                 Console.ReadLine();
@@ -58,7 +59,7 @@ namespace Lab7
                  throw new Exception();
                  Console.ReadLine();
                 }
-              }
+              
                catch(Exception ex2)
                {
                 Console.WriteLine("ex2");
@@ -71,7 +72,7 @@ namespace Lab7
                 var patternP = @"^[0-9]{3}+\-[0-9]{3}+\-[0-9]{4}$";
                 bool number = Regex.IsMatch(phone, patternP);
                 
-                {
+                if (number)
                 Console.WriteLine("Phone number is valid!");
                 Console.ReadLine();
                 }
@@ -92,7 +93,7 @@ namespace Lab7
             {
                 var patternD = @"^[0-9]{2}+\/[0-9]{2}+\/[0-9]{2}$";
                 bool day = Regex.IsMatch(date, patternD);
-                
+                if (day)
                 {
                 Console.WriteLine("Date is valid!");
                 Console.ReadLine();
